@@ -12,6 +12,9 @@
       self.todoList.push(todo);
       self.todoSummary(''); //入力欄を空にする
     };
+    self.canAddTodo = ko.computed(function(){
+      return self.todoSummary().length > 0;
+    });
   }
 
   ko.applyBindings(new ViewModel());

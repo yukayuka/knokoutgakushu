@@ -12,8 +12,8 @@
   <h1>Todo</h1>
 
   <form data-bind="submit: addTodo">
-    <input type="text" data-bind="value: todoSummary" placeholder="todo"/>
-    <input type="submit" value="add"/>
+    <input type="text" data-bind="value: todoSummary, valueUpdate: 'afterkeydown'" placeholder="todo"/>
+    <input type="submit" value="add" data-bind="enable: canAddTodo"/>
   </form>
 
   <div id="todoList">
