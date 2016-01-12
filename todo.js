@@ -15,6 +15,11 @@
     self.canAddTodo = ko.computed(function(){
       return self.todoSummary().length > 0;
     });
+
+    //削除機能を追加
+    self.deleteTodo = function(todo){
+      self.todoList.remove(todo);
+    };
   }
 
   ko.applyBindings(new ViewModel());

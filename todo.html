@@ -23,7 +23,7 @@
       <li class="todoItem">
         <input type="checkbox"/>
         <span class="summary" data-bind="text: summary"></span>
-        <span class="delete redLink">delete</span>
+        <span class="delete redLink" date-bind="click: $parent.deleteTodo">delete</span>
       </li>
     </ul>
   </div>
